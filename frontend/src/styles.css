@@ -1,0 +1,137 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #111827;
+  background: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.hero h1 {
+  margin-bottom: 0.25rem;
+}
+
+.hero p {
+  margin-top: 0;
+  color: #4b5563;
+}
+
+.search-bar {
+  margin: 1rem 0;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
+}
+
+.job-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.job-card {
+  border: 1px solid #e5e7eb;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.job-card.selected {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.job-card__header,
+.job-card__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.score {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.company,
+.location {
+  margin: 0.2rem 0;
+  color: #4b5563;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.75rem 0;
+}
+
+.tags span {
+  background: #eff6ff;
+  color: #1e3a8a;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  padding: 0.2rem 0.55rem;
+}
+
+.recommendation-panel {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  align-self: start;
+  position: sticky;
+  top: 1rem;
+}
+
+.recommendation-score {
+  font-size: 1.6rem;
+  margin: 0.35rem 0 0.85rem;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.primary-action {
+  width: 100%;
+  margin-top: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-panel {
+    position: static;
+  }
+}
